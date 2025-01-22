@@ -18,7 +18,7 @@ h1, h2
     
 }
 
-p, a
+a
 {
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-size: 24px;
@@ -29,6 +29,14 @@ p, a
     line-height: 1.5;
 }
 
+p
+{
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 24px; 
+    text-align: center; 
+    color: rgb(243, 246, 246);
+    line-height: 1.5;
+}
 .urls 
 {
     font-size: 20px;

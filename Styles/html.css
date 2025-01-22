@@ -29,6 +29,10 @@ img.imgCovers {
     clear: both;
     font-weight: bold;
 }
+.image-container p:hover{
+    color: rgb(32, 27, 55);
+    text-decoration: underline;
+}
 
 h1 {
     font-size: 30px;
@@ -50,6 +54,7 @@ a {
     color: rgb(243, 246, 246);
     text-align: center;
     line-height: 1.5;
+    text-decoration: none;
 }
 
 p {

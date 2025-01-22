@@ -1,7 +1,14 @@
+body
+{
+    background-color: #d0cdd8;
+}
+
+
+
 img.imgCovers 
 {
-    width: 150px;
-    height: 160px;
+    width: 250px;
+    height: 350px;
 }
 
 h1, h2
@@ -33,21 +40,23 @@ p
 {
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-size: 24px; 
-    text-align: center; 
-    color: rgb(243, 246, 246);
+    text-align: fixed; 
+    color: rgb(3, 1, 16);
     line-height: 1.5;
 }
-.urls 
-{
+.urls {
+    display: block;
+    width: fit-content;
+    text-align: center;
     font-size: 20px;
     background-color: rgba(132, 132, 164, 0.8);
     border-radius: 30px;
-    text-align: center;
-    color: #ededf5;
-    text-shadow: 1px 1px 1px #32587e;
+    color: #f6f6f7;
+    text-shadow: 4px 4px 5px #32587e;
     text-decoration: none;
     font-weight: bold;
     padding: 5px 25px;
+    margin: 0 auto;
 }
 
 .urls:hover

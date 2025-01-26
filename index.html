@@ -1,46 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./Styles/html.css" />
     <title>Netflix</title>
 </head>
-
 <body>
-   <header>
-    <nav>
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="store.html">Store</a></li>
-            <li><a href="login.html">Login</a></li>
-            <li><a href="register.html">Register</a></li>
-            <li><a href="about.html">About</a></li>
-        </ul>
-    </nav>
-</header>
+    <header id="header">
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="store.html">Store</a></li>
+                <li><a href="login.html">Login</a></li>
+                <li><a href="register.html">Register</a></li>
+                <li><a href="about.html">About</a></li>
+            </ul>
+        </nav>
+    </header>
 
-    <h1>Netflix</h1>
+    <main>
+        <section id="hero"></section>
+        
+        <section id="content">
+            <h1>Netflix</h1>
+            
+            <div class="image-container">
+                <div>
+                    <a href="./lotr.html">
+                        <img class="imgCovers" src="Assets/Sratim/LordOfTheRings.jpg" alt="Lord of the Rings Movie Poster">
+                        <p>Lord of The Rings</p>
+                    </a>
+                </div> 
 
-    <br>*
+                <div>
+                    <img class="imgCovers" src="Assets/background.jpg" alt="Netflix Background Image">
+                    <p>Netflix Collection</p>
+                </div>
+            </div>
+        </section>
+    </main>
 
-
-
-    <div class="image-container">
-        <div> <a href="./lotr.html">
-            <img class="imgCovers" src="Assets/Sratim/LordOfTheRings.jpg" alt="LordOfTheRings">
-            <p>Lord of The Rings</p></a>
-        </div> 
-
-        <div>
-            <img class="imgCovers" src="Assets/background.jpg" alt="12">
-            <p>123123</p>
-
-    </div>
-
-
-
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Contact Us</h3>
+                <p>Email: support@netflix.com</p>
+                <p>Phone: 1-800-NETFLIX</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Netflix. All Rights Reserved.</p>
+        </div>
+    </footer>
 </body>
-
 </html>

@@ -1,37 +1,90 @@
-body {
-    background-image: url(/Assets/background2.jpeg   );
-    background-repeat: no-repeat;
-    background-size: cover;
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-image: url(/Assets/background2.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
 
-img.imgCovers {
-    width: 250px; 
-    height: 350px; 
+#header {
+    display: grid;
+    grid-template-columns: 1fr;
+    background-color: rgba(4, 16, 43, 0.7);
+    padding: 1rem;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px #132144;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #ffdd57;
+}
+
+#content {
+    display: grid;
+    grid-template-columns: 1fr;
+    padding: 20px;
 }
 
 .image-container {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    justify-items: center;
 }
 
-.image-container div{
-    text-align: center;
+.image-container div {
+    max-width: 200px;
+}
+
+.imgCovers {
+    width: 200px;
+    height: 300px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.5);
+    transition: transform 0.3s ease;
+}
+
+.imgCovers:hover {
+    transform: scale(1.05);
 }
 
 .image-container p {
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode';
+    font-family: 'Lucida Sans', sans-serif;
     font-size: 22px;
     text-shadow: 1px 1px 4px #012243;
     color: #e2e2e6;
-    text-align: center;
     margin-top: 10px;
-    clear: both;
     font-weight: bold;
+    transition: color 0.3s ease;
 }
-.image-container p:hover{
-    color: rgb(32, 27, 55);
-    text-decoration: underline;
+
+.image-container p:hover {
+    color: #ffdd57;
 }
 
 h1 {
@@ -42,79 +95,47 @@ h1 {
     color: #fcfeff;
     text-shadow: 4px 4px 5px #343d72;
     border-bottom: 4px solid #2e4862;
-    padding: 10px, 0;
-
-}
-
-a {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    font-size: 24px;
-    text-shadow: 4px 4px 5px #0b7ae9;
-    line-height: 40px;
-    color: rgb(243, 246, 246);
-    text-align: center;
-    line-height: 1.5;
-    text-decoration: none;
-}
-
-p {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    font-size: 24px;
-    text-align: fixed;
-    color: rgb(3, 1, 16);
-    line-height: 1.5;
-}
-
-p.movies {}
-
-.urls {
-    display: block;
-    width: fit-content;
-    text-align: center;
-    font-size: 20px;
-    background-color: rgba(132, 132, 164, 0.8);
-    border-radius: 30px;
-    color: #f6f6f7;
-    text-shadow: 4px 4px 5px #32587e;
-    text-decoration: none;
-    font-weight: bold;
-    padding: 5px 25px;
-    margin: 0 auto;
-}
-
-.urls:hover {
-    color: #ffdd57;
-}
-
-nav {
-    background-color: rgba(4, 16, 43, 0.5);
     padding: 10px 0;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-    border-radius: 10px;
+    margin-bottom: 20px;
 }
 
-nav ul {
-    list-style: none;
-    display: flex;
-    justify-content: center;
-    padding: 0;
-    margin: 0;
+#hero {
+    display: grid;
+    grid-template-columns: 1fr;
 }
 
-nav ul li {
-    margin: 0 15px;
-}
-
-nav ul li a {
-    text-decoration: none;
+footer {
+    display: grid;
+    grid-template-columns: 1fr;
+    background-color: rgba(4, 16, 43, 0.7);
     color: #fff;
-    font-size: 20px;
-    font-weight: bold;
-    text-shadow: 2px 2px 4px #132144;
+    padding: 20px;
+    text-align: center;
 }
 
-nav ul li a:hover {
-    color: #ffdd57;
+@media screen and (max-width: 768px) {
+    .image-container {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 10px;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .imgCovers {
+        width: 200px;
+        height: 300px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .image-container {
+        grid-template-columns: 1fr;
+    }
+
+    h1 {
+        font-size: 24px;
+    }
 }

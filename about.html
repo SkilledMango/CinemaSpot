@@ -3,133 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./Styles/about.css" />
     <title>About Us - Netflix</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
 
-        body {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
-            background-color: #f5f5f5;
-        }
-
-        #header {
-            background-color: rgba(4, 16, 43, 0.7);
-            padding: 1rem;
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-        }
-
-        nav ul {
-            list-style: none;
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-            gap: 20px;
-        }
-
-        nav ul li a {
-            color: #fff;
-            text-decoration: none;
-            font-size: 18px;
-            font-weight: bold;
-            text-shadow: 2px 2px 4px #132144;
-            transition: color 0.3s ease;
-        }
-
-        nav ul li a:hover {
-            color: #ffdd57;
-        }
-
-        .header-content {
-            text-align: center;
-            padding: 3rem 0;
-            background-color: #2c3e50;
-            color: white;
-            margin-bottom: 2rem;
-        }
-
-        .header-content h1 {
-            font-size: 2.5rem;
-            margin-bottom: 1rem;
-        }
-
-        .header-content p {
-            font-size: 1.2rem;
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 0 1rem;
-        }
-
-        .team-container {
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 0 1rem;
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 2rem;
-        }
-
-        .team-member {
-            text-align: center;
-            background-color: white;
-            border-radius: 10px;
-            overflow: hidden;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-
-        .team-member:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 8px 12px rgba(0, 0, 0, 0.15);
-        }
-
-        .team-member img {
-            width: 60%;
-            height: 300px;
-            object-fit: cover;
-        }
-
-        .team-info {
-            padding: 1.5rem;
-        }
-
-        .team-info h3 {
-            font-size: 1.5rem;
-            color: #2c3e50;
-            margin-bottom: 0.5rem;
-        }
-
-        .team-info p {
-            color: #666;
-            font-size: 1.1rem;
-        }
-
-        footer {
-            background-color: rgba(4, 16, 43, 0.7);
-            color: #fff;
-            padding: 20px;
-            text-align: center;
-            margin-top: 2rem;
-        }
-
-        @media (max-width: 768px) {
-            .team-container {
-                grid-template-columns: 1fr;
-                max-width: 400px;
-            }
-
-            nav ul {
-                flex-direction: column;
-                align-items: center;
-            }
-        }
-    </style>
 </head>
 <body>
     <header id="header">
@@ -166,6 +42,8 @@
             </div>
         </div>
     </div>
+
+    <a href="index.html" class="urls">Back to Home</a>
 
     <footer>
         <div class="footer-content">

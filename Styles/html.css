@@ -1,40 +1,32 @@
 body {
     font-family: Arial, sans-serif;
-    line-height: 1.6;
+    background-color: white;
     background-image: url(/Assets/Images/Backgrounds/background.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
 }
 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f5f5f5;
+}
+
 #header {
-    display: grid;
-    grid-template-columns: 1fr;
-    background-color: rgba(4, 16, 43, 0.7);
+    background-color: rgba(177, 180, 185, 0.7);
     padding: 1rem;
     position: sticky;
     top: 0;
     z-index: 1000;
 }
-.header-content {
-    text-align: center;
-    padding: 3rem 0;
-    background-color: #2c3e50;
-    color: white;
-    margin-bottom: 2rem;
-}
 
-.header-content h1 {
-    font-size: 2.5rem;
-    margin-bottom: 1rem;
-}
-
-.header-content p {
-    font-size: 1.2rem;
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 0 1rem;
-}
 nav ul {
     list-style: none;
     display: flex;
@@ -54,6 +46,26 @@ nav ul li a {
 
 nav ul li a:hover {
     color: #ffdd57;
+}
+
+.header-content {
+    text-align: center;
+    padding: 1.5rem 0;
+    background-color: #2c3e50;
+    color: white;
+    margin-bottom: 2rem;
+}
+
+.header-content h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.header-content p {
+    font-size: 1.2rem;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 1rem;
 }
 
 #content {
@@ -78,7 +90,7 @@ nav ul li a:hover {
     width: 200px;
     height: 300px;
     border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.5);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
     transition: transform 0.3s ease;
 }
 
@@ -105,17 +117,7 @@ nav ul li a:hover {
     color: #ffdd57;
 }
 
-h1 {
-    font-size: 30px;
-    background-color: rgba(49, 45, 67, 0.5);
-    border-radius: 30px;
-    text-align: center;
-    color: #fcfeff;
-    text-shadow: 4px 4px 5px #343d72;
-    border-bottom: 4px solid #2e4862;
-    padding: 10px 0;
-    margin-bottom: 20px;
-}
+
 
 .urls {
     display: flex;
@@ -128,7 +130,7 @@ h1 {
     color: #fcfeff;
     text-shadow: 4px 4px 5px #343d72;
     padding: 5px 20px;
-    margin: 20px auto; 
+    margin: 20px auto;
     width: fit-content;
     text-align: center;
     text-decoration: none;
@@ -177,10 +179,22 @@ footer {
 }
 
 form {
-    background-color: #1a4782;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    width: 300px;
-    text-align: center;
-}
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  label {
+    color: white;
+  }
+
+  button {
+    padding: 2px;
+  }
+
+  button:hover{
+    background-color: rgb(91, 130, 197);
+  }

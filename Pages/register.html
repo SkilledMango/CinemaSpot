@@ -1,39 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/Styles/html.css"/>
+    <link rel="stylesheet" href="/Styles/html.css" />
     <title>Register</title>
 </head>
+
 <body>
 
-    <nav>
-        <ul>
-            <li><a href="/index.html">Home</a></li>
-            <li><a href="/Pages/store.html">Store</a></li>
-            <li><a href="/Pages/login.html">Login</a></li>
-            <li><a href="/Pages/register.html">Register</a></li>
-            <li><a href="/Pages/about.html">About</a></li>
-        </ul>
-    </nav>
-    
-    <h1>Register</h1>
+    <header id="header">
+        <nav>
+            <ul>
+                <li><a href="/index.html">Home</a></li>
+                <li><a href="/Pages/store.html">Store</a></li>
+                <li><a href="/Pages/login.html">Login</a></li>
+                <li><a href="/Pages/register.html">Register</a></li>
+                <li><a href="/Pages/about.html">About</a></li>
+            </ul>
+        </nav>
+    </header>
 
-        <form action="/submit-register" method="post">
-            <label for="username">Username:</label>
-            <input type="text" id="username" name="username" required>
-            <br><br>
-            <label for="password">Password:</label>
-            <input type="password" id="password" name="password" required>
-            <br><br>
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required>
-            <br><br>
-            <button type="submit">Register</button>
-        </form>
+    <div class="header-content">
+        <h1>Register</h1>
+    </div>
+
+    <form action="/submit-register" method="post">
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" required>
         <br><br>
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required>
+        <br><br>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+        <br><br>
+        <button type="submit">Register</button>
+    </form>
+    <br><br>
 
     <a href="/index.html" class="urls">Back to Home</a>
 </body>
+
 </html>

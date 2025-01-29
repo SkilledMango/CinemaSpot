@@ -19,14 +19,6 @@ body {
     background-color: #f5f5f5;
 }
 
-#header {
-    background-color: rgba(177, 180, 185, 0.7);
-    padding: 1rem;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-}
-
 nav ul {
     list-style: none;
     display: flex;
@@ -47,13 +39,20 @@ nav ul li a {
 nav ul li a:hover {
     color: #ffdd57;
 }
+#header {
+    background-color: rgba(112, 119, 131, 0.564);
+    padding: 1rem;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
 
 .header-content {
     text-align: center;
-    padding: 0.5rem 0;
+    padding: 1.5rem 0;
     background-color: #040c1a00;
     color: white;
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
 }
 
 .header-content h1 {
@@ -205,7 +204,7 @@ form {
 
   h2{
     font-size: 28px;
-    background: linear-gradient(90deg, #07072f, #16213e);
+
     border-radius: 15px;
     text-align: center;
     color: #f8c471;

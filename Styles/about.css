@@ -58,6 +58,7 @@
         }
 
         .header-content p {
+            font-family: 'Lucida Sans', sans-serif;
             font-size: 1.2rem;
             max-width: 800px;
             margin: 0 auto;

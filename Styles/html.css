@@ -63,7 +63,8 @@ nav ul li a:hover {
 }
 
 .header-content p {
-    font-size: 1.2rem;
+    font-family: 'Lucida Sans', sans-serif;
+    font-size: 1.5rem;
     max-width: 800px;
     margin: 0 auto;
     padding: 0 1rem;
@@ -212,6 +213,8 @@ form {
     border-bottom: 5px solid #635d07;
     padding: 15px;
     font-family: "Cinematic", sans-serif;
-    letter-spacing: 2px;
+    letter-spacing: 5px;
     text-transform: uppercase;
   }
+
+  

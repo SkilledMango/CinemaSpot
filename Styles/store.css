@@ -1,0 +1,59 @@
+/* store.css */
+.store-section-header {
+    text-align: center;
+    padding: 1rem 0;
+    background-color: rgba(44, 62, 80, 0.85);
+    color: white;
+    margin: 2rem 0;
+    /* Remove any potential border */
+    border: none;
+    /* Remove any outline */
+    outline: none;
+}
+
+.store-section-header h2 {
+    font-size: 2.2rem;
+    margin-bottom: 0.5rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+    color: #e2e2e6;
+    /* Remove any potential border */
+    border: none;
+    /* Remove any outline */
+    outline: none;
+}
+
+/* Price styling */
+.image-container p span.price {
+    color: #ffdd57;
+    font-weight: bold;
+    display: block;
+    margin-top: 5px;
+}
+
+/* Store item hover effect */
+.store-item {
+    transition: transform 0.3s ease;
+}
+
+.store-item:hover {
+    transform: scale(1.05);
+}
+
+/* Remove outline from header content if needed */
+.header-content {
+    border: none;
+    outline: none;
+}
+
+/* Ensure no borders on any headers in store */
+.store-section-header, 
+.store-section-header h2, 
+.header-content, 
+.header-content h1 {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    border: none !important;
+    outline: none !important;
+    box-shadow: none !important;
+}

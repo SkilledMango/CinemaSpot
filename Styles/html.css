@@ -19,6 +19,8 @@ body {
     background-color: #f5f5f5;
 }
 
+
+
 nav ul {
     list-style: none;
     display: flex;
@@ -216,5 +218,37 @@ form {
     letter-spacing: 5px;
     text-transform: uppercase;
   }
+
+  aside{
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 250px;
+    height: 100%;
+    color: white;
+    padding: 20px;
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5);
+  }
+
+  aside h3{
+    color: #fff;
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px #132144;
+  }
+
+
+aside ul li a {
+    color: #fff;
+    text-align: center;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px #132144;
+}
+main {
+    margin-right: 270px;
+}
 
   

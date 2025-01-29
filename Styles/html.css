@@ -207,7 +207,6 @@ form {
 
   h2{
     font-size: 28px;
-
     border-radius: 15px;
     text-align: center;
     color: #f8c471;
@@ -255,8 +254,6 @@ aside ul {
     list-style: none;
     padding: 0;
 }
-main {
-    margin-right: 270px;
-}
+
 
   

@@ -27,6 +27,7 @@ nav ul {
     justify-content: center;
     flex-wrap: wrap;
     gap: 20px;
+    z-index: 1000;
 }
 
 nav ul li a {
@@ -46,7 +47,6 @@ nav ul li a:hover {
     padding: 1rem;
     position: sticky;
     top: 0;
-    z-index: 1000;
 }
 
 .header-content {
@@ -236,6 +236,8 @@ form {
     font-size: 18px;
     font-weight: bold;
     text-shadow: 2px 2px 4px #132144;
+    position: relative;
+    z-index: 1000;
   }
 
 
@@ -243,9 +245,15 @@ aside ul li a {
     color: #fff;
     text-align: center;
     text-decoration: none;
-    font-size: 18px;
+    font-size: 1.2rem;
     font-weight: bold;
     text-shadow: 2px 2px 4px #132144;
+    display: block;
+    padding: 5px;
+}
+aside ul {
+    list-style: none;
+    padding: 0;
 }
 main {
     margin-right: 270px;

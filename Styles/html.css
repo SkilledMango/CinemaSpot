@@ -205,18 +205,22 @@ form {
     background-color: rgb(91, 130, 197);
   }
 
-  h2{
+  h2 {
     font-size: 28px;
     border-radius: 15px;
     text-align: center;
     color: #f8c471;
     text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.7);
     border-bottom: 5px solid #635d07;
-    padding: 15px;
+    padding: 5px 40px;
     font-family: "Cinematic", sans-serif;
     letter-spacing: 5px;
     text-transform: uppercase;
-  }
+    display: block;
+    width: fit-content;
+    margin: auto;
+}
+  
 
   aside{
     position: fixed;

@@ -21,13 +21,21 @@ body {
 
 
 
+nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 0 20px;
+}
+
 nav ul {
     list-style: none;
     display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
+    justify-content: center;  
     gap: 20px;
-    z-index: 1000;
+    margin: 0;
+    padding: 0;
 }
 
 nav ul li a {
@@ -42,6 +50,13 @@ nav ul li a {
 nav ul li a:hover {
     color: #ffdd57;
 }
+
+nav ul li:first-child {
+    position: absolute;
+    left: 20px;
+}
+
+
 #header {
     background-color: rgba(112, 119, 131, 0.564);
     padding: 1rem;
@@ -190,7 +205,7 @@ form {
     align-items: center;
     padding: 20px;
     border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0);
   }
 
   label {
@@ -219,6 +234,27 @@ form {
     display: block;
     width: fit-content;
     margin: auto;
+}
+
+
+h4 {
+    font-size: 20px;
+    border-radius: 15px;
+    text-align: center;
+    color: #f8c471;
+    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.7);
+    border-bottom: 5px solid #635d07;
+    padding: 5px 30px;
+    font-family: "Cinematic", sans-serif;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    display: block;
+    width: fit-content;
+    margin: auto;
+}
+
+a:hover {
+    color: #d2c72b
 }
   
 
@@ -258,6 +294,19 @@ aside ul {
     list-style: none;
     padding: 0;
 }
+
+.imgButton{
+    filter: brightness(100) saturate(100%) invert(100%) sepia(100%) ;
+    width: 25px;
+    height: 25px;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+.imgButton:hover{
+    filter:  brightness(100%) saturate(200%) sepia(0%) hue-rotate(45deg);
+}
+
 
 
   

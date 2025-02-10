@@ -370,7 +370,10 @@ aside ul {
 .sidebar ul li a:hover {
     color: #ffdd57;
 }
-
+.logo {
+    width:300px;
+    height:100px;
+}
 
 
   

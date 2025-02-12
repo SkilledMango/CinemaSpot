@@ -25,6 +25,7 @@ nav {
     align-items: center;
     width: 100%;
     padding: 0 20px;
+    z-index: 2000; /* Above header but below sidebar */
 }
 
 nav ul {
@@ -59,6 +60,7 @@ nav ul li:first-child {
     padding: 1rem;
     position: sticky;
     top: 0;
+    z-index: 1999; /* Below sidebar but above regular content */
 }
 
 .header-content {
@@ -320,18 +322,14 @@ a:hover {
 }
   
 
-  aside{
-    position: fixed;
-    top: 0;
-    right: 0;
-    width: 250px;
-    height: 100%;
+aside {
+    position: static;  /* or remove position property entirely */
+    width: auto;
     color: white;
     padding: 20px;
+}
 
-  }
-
-  aside h3{
+aside h3{
     color: #fff;
     border-bottom: 3px solid #635d07;
     padding: 5px 30px;
@@ -342,7 +340,7 @@ a:hover {
     position: relative;
     z-index: 1000;
 
-  }
+}
 
 
 aside ul li a {
@@ -384,7 +382,7 @@ aside ul {
     right: 25px;
     font-size: 25px;
     cursor: pointer;
-    z-index: 1001;
+    z-index: 2002; /* Highest */
     color: white;
     padding: 0px 0;
     border-radius: 5px;
@@ -406,13 +404,14 @@ aside ul {
     padding: 20px;
     transition: right 0.3s ease-in-out;
     box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5);
-    pointer-events: none;
+    pointer-events: none;  /* Disable interaction when sidebar is closed */
+    z-index: 2001; /* Just below hamburger but above everything else */
 }
     
 
 .menu-checkbox:checked + .hamburger-menu + .sidebar {
     right: 0;
-    pointer-events: auto;
+    pointer-events: auto;  /* Enable interaction when sidebar is open */
 }
 
 
@@ -443,4 +442,3 @@ aside ul {
 }
 
 
-  

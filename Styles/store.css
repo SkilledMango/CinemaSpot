@@ -1,13 +1,10 @@
-/* store.css */
 .store-section-header {
     text-align: center;
     padding: 1rem 0;
     background-color: rgba(44, 62, 80, 0.85);
     color: white;
     margin: 2rem 0;
-    /* Remove any potential border */
     border: none;
-    /* Remove any outline */
     outline: none;
 }
 
@@ -29,6 +26,7 @@
 
 .store-item {
     transition: transform 0.3s ease;
+    max-width: 200px;
 }
 
 .store-item:hover {
@@ -103,7 +101,7 @@ aside ul {
     right: 25px;
     font-size: 25px;
     cursor: pointer;
-    z-index: 1001;
+    z-index: 2002; /* Highest z-index */
     color: white;
     padding: 0px 0;
     border-radius: 5px;
@@ -121,6 +119,7 @@ aside ul {
     padding: 20px;
     transition: right 0.3s ease-in-out;
     box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5);
+    z-index: 2001; /* Just below hamburger but above everything else */
 }
 
 .menu-checkbox:checked + .hamburger-menu + .sidebar {
@@ -147,6 +146,39 @@ aside ul {
 
 .sidebar ul li a:hover {
     color: #ffdd57;
+}
+
+.image-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+    justify-items: center;
+}
+
+.imgCovers {
+    width: 230px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease;
+}
+
+.imgCovers:hover {
+    transform: scale(1.05);
+}
+
+@media screen and (max-width: 768px) {
+    .image-container {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .image-container {
+        grid-template-columns: 1fr;
+    }
 }
 
 

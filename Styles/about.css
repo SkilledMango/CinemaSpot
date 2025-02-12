@@ -403,11 +403,8 @@ aside ul {
         }
     
     aside{
-        position: fixed;
-        top: 0;
-        right: 0;
-        width: 250px;
-        height: 100%;
+        position: static;  /* or remove position property entirely */
+        width: auto;
         color: white;
         padding: 20px;
     
@@ -484,10 +481,13 @@ aside ul {
         padding: 20px;
         transition: right 0.3s ease-in-out;
         box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5);
+        pointer-events: none;
+        z-index: 1000;
     }
     
     .menu-checkbox:checked + .hamburger-menu + .sidebar {
         right: 0;
+        pointer-events: auto;
     }
     
     
@@ -511,4 +511,3 @@ aside ul {
     .sidebar ul li a:hover {
         color: #ffdd57;
     }
-        

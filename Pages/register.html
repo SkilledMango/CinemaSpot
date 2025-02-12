@@ -5,19 +5,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/Styles/html.css" />
-    <title>Register</title>
+    <link rel="stylesheet" href="/Styles/register.css">
+    <title>Register - CinemaSpot</title>
 </head>
 
 <body>
-<main>
     <header id="header">
         <nav>
             <ul>
-                <li><a href="/index.html">
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.2" stroke="currentColor" class="size-6" style="width: 35px; height: 25px;">
-                      <path stroke-linecap="round" stroke-linejoin="round" d="m2.25 12 8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25" />
-                    </svg>
-                  </a></li>                      
+                <li>
+                    <a href="/index.html">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.2" stroke="currentColor" class="size-6" style="width: 35px; height: 25px;">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="m2.25 12 8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25" />
+                        </svg>
+                    </a>
+                </li>
                 <li><a href="/Pages/store.html">Store</a></li>
                 <li><a href="/Pages/login.html">Login</a></li>
                 <li><a href="/Pages/register.html">Register</a></li>
@@ -26,65 +28,94 @@
         </nav>
     </header>
 
-    <div class="header-content">
-        <h1>Register</h1>
-    </div>
+    <div class="auth-container">
+        <div class="left-panel">
+            <div class="movie-poster-overlay"></div>
+            <div class="content">
+                <h1>Join CinemaSpot</h1>
+                <p>Your gateway to endless entertainment</p>
+            </div>
+        </div>
+        <div class="right-panel">
+            <div class="form-container">
+                <div class="logo-container">
+                    <img src="/Assets/Images/buttons/LogoRender.png" alt="CinemaSpot Logo" class="logo">
+                </div>
+                <h2>Create Account</h2>
+                <form id="registerForm">
+                    <div class="input-group">
+                        <input type="text" id="username" required>
+                        <label for="username">Username</label>
+                    </div>
 
-    <form action="/submit-register" method="post">
-        <label for="username">Username:</label>
-        <input type="text" id="username" name="username" required>
-        <br><br>
-        <label for="password">Password:</label>
-        <input type="password" id="password" name="password" required>
-        <br><br>
-        <label for="email">Email:</label>
-        <input type="email" id="email" name="email" required>
-        <br><br>
-        <button type="submit">Register</button>
-    </form>
-    <br><br>
-    <aside>
+                    <div class="input-group">
+                        <input type="email" id="email" required>
+                        <label for="email">Email</label>
+                    </div>
 
-        <input type="checkbox" id="menu-toggle" class="menu-checkbox">
+                    <div class="input-group">
+                        <input type="password" id="password" required>
+                        <label for="password">Password</label>
+                        <div class="cube-peek">
+                            <div class="cube-face">
+                                <div class="eye">
+                                    <div class="pupil"></div>
+                                </div>
+                                <div class="mouth"></div>
+                            </div>
+                        </div>
+                        <div class="password-requirements">
+                            <ul>
+                                <li id="length">At least 6 characters</li>
+                                <li id="capital">One capital letter</li>
+                                <li id="english">English letters & symbols only</li>
+                            </ul>
+                        </div>
+                    </div>
 
-
-        <label for="menu-toggle" class="hamburger-menu">☰</label>
-
-
-        <aside class="sidebar">
-            <h3>Recommendeds</h3>
-            <ul>
-                <br>
-                <h4>TV Shows</h4>
-                <li><a href="./Page/AvatarTLA.html">The Last Air Bender</a></li>
-                <li><a href="./Page/the100.html">Breaking Bad</a></li>
-
-                <li><a href="./Page/breakingbad.html">The 100</a></li>
-                <br>
-                <h4>Movies</h4>
-                <li><a href="./Page/lotr.html">Lord Of The Rings</a></li>
-                <br>
-                <h4>Store</h4>
-                <li><a href="Pages/store.html">Merchandise</a></li>
-
-            </ul>
-
-        </aside>
-    </main>
-
-    <a href="/index.html" class="urls">Back to Home</a>
-</body>
-<footer>
-    <div class="footer-content">
-        <div class="footer-section">
-            <h3>Contact Us</h3>
-            <p>Email: support@netflix.com</p>
-            <p>Phone: 1-800-NETFLIX</p>
+                    <button type="submit">Create Account</button>
+                </form>
+                <div class="login-link">
+                    <p>Already have an account? <a href="login.html">Sign In</a></p>
+                </div>
+            </div>
         </div>
     </div>
-    <div class="footer-bottom">
-        <p>&copy; 2024 Netflix. All Rights Reserved.</p>
-    </div>
-</footer>
 
+    <script>
+        const passwordInput = document.getElementById('password');
+        const cubePeek = document.querySelector('.cube-peek');
+        const pupil = document.querySelector('.pupil');
+
+        cubePeek.addEventListener('click', function() {
+            if (passwordInput.type === 'password') {
+                passwordInput.type = 'text';
+                this.classList.add('is-peeking');
+            } else {
+                passwordInput.type = 'password';
+                this.classList.remove('is-peeking');
+            }
+        });
+
+        document.addEventListener('mousemove', (e) => {
+            if (passwordInput.type === 'text') {
+                const eye = document.querySelector('.eye');
+                const eyeRect = eye.getBoundingClientRect();
+                const eyeCenterX = eyeRect.left + (eyeRect.width / 2);
+                const eyeCenterY = eyeRect.top + (eyeRect.height / 2);
+                
+                const angle = Math.atan2(e.clientY - eyeCenterY, e.clientX - eyeCenterX);
+                const distance = Math.min(4, Math.hypot(e.clientX - eyeCenterX, e.clientY - eyeCenterY) / 30);
+                
+                const x = Math.cos(angle) * distance;
+                const y = Math.sin(angle) * distance;
+                
+                requestAnimationFrame(() => {
+                    pupil.style.transform = `translate(${x}px, ${y}px)`;
+                });
+            }
+        });
+    </script>
+
+</body>
 </html>

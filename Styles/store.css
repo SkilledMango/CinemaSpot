@@ -37,45 +37,6 @@
     border: none;
     outline: none;
 }
-aside{
-    position: fixed;
-    top: 0;
-    right: 0;
-    width: 250px;
-    height: 100%;
-    color: white;
-    padding: 20px;
-
-  }
-
-  aside h3{
-    color: #fff;
-    border-bottom: 3px solid #635d07;
-    padding: 5px 30px;
-    text-align: center;
-    font-size: 18px;
-    font-weight: bold;
-    text-shadow: 2px 2px 4px #132144;
-    position: relative;
-    z-index: 1000;
-
-  }
-
-
-aside ul li a {
-    color: #fff;
-    text-align: center;
-    text-decoration: none;
-    font-size: 1.2rem;
-    font-weight: bold;
-    text-shadow: 2px 2px 4px #132144;
-    display: block;
-    padding: 5px;
-}
-aside ul {
-    list-style: none;
-    padding: 0;
-}
 
 .imgButton{
     filter: brightness(100) saturate(100%) invert(100%) sepia(100%) ;
@@ -89,11 +50,9 @@ aside ul {
     filter:  brightness(100%) saturate(200%) sepia(0%) hue-rotate(45deg);
 }
 
-
 .menu-checkbox {
     display: none;
 }
-
 
 .hamburger-menu {
     position: fixed;
@@ -105,47 +64,6 @@ aside ul {
     color: white;
     padding: 0px 0;
     border-radius: 5px;
-}
-
-
-.sidebar {
-    position: fixed;
-    top: 0;
-    right: -250px;
-    width: 250px;
-    height: 100%;
-    background-color: rgba(77, 78, 81, 0.379);
-    color: white;
-    padding: 20px;
-    transition: right 0.3s ease-in-out;
-    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5);
-    z-index: 2001; /* Just below hamburger but above everything else */
-}
-
-.menu-checkbox:checked + .hamburger-menu + .sidebar {
-    right: 0;
-}
-
-
-.sidebar ul {
-    list-style: none;
-    padding: 0;
-}
-
-.sidebar ul li {
-    padding: 15px 0;
-    text-align: center;
-}
-
-.sidebar ul li a {
-    color: white;
-    text-decoration: none;
-    font-size: 18px;
-    display: block;
-}
-
-.sidebar ul li a:hover {
-    color: #ffdd57;
 }
 
 .image-container {

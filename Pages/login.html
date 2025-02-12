@@ -95,6 +95,7 @@
     <script>
     const passwordInput = document.getElementById('password');
     const cubePeek = document.querySelector('.cube-peek');
+    const pupil = document.querySelector('.pupil');
 
     cubePeek.addEventListener('click', function() {
         if (passwordInput.type === 'password') {
@@ -103,6 +104,25 @@
         } else {
             passwordInput.type = 'password';
             this.classList.remove('is-peeking');
+        }
+    });
+
+    document.addEventListener('mousemove', (e) => {
+        if (passwordInput.type === 'text') {
+            const eye = document.querySelector('.eye');
+            const eyeRect = eye.getBoundingClientRect();
+            const eyeCenterX = eyeRect.left + (eyeRect.width / 2);
+            const eyeCenterY = eyeRect.top + (eyeRect.height / 2);
+            
+            const angle = Math.atan2(e.clientY - eyeCenterY, e.clientX - eyeCenterX);
+            const distance = Math.min(4, Math.hypot(e.clientX - eyeCenterX, e.clientY - eyeCenterY) / 30);
+            
+            const x = Math.cos(angle) * distance;
+            const y = Math.sin(angle) * distance;
+            
+            requestAnimationFrame(() => {
+                pupil.style.transform = `translate(${x}px, ${y}px)`;
+            });
         }
     });
     </script>

@@ -105,7 +105,46 @@
         const passwordInput = document.getElementById('password');
         const cubePeek = document.querySelector('.cube-peek');
         const pupil = document.querySelector('.pupil');
+        const form = document.getElementById('registerForm');
+        
+        // Get requirement elements
+        const lengthReq = document.getElementById('length');
+        const capitalReq = document.getElementById('capital');
+        const englishReq = document.getElementById('english');
 
+        // Password validation function
+        function validatePassword(password) {
+            const requirements = {
+                length: password.length >= 6,
+                capital: /[A-Z]/.test(password),
+                english: /^[A-Za-z0-9!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?]*$/.test(password)
+            };
+
+            // Update visual feedback
+            lengthReq.classList.toggle('valid', requirements.length);
+            capitalReq.classList.toggle('valid', requirements.capital);
+            englishReq.classList.toggle('valid', requirements.english);
+
+            return Object.values(requirements).every(req => req);
+        }
+
+        // Password input event listener
+        passwordInput.addEventListener('input', () => {
+            validatePassword(passwordInput.value);
+        });
+
+        // Form submission
+        form.addEventListener('submit', (e) => {
+            e.preventDefault();
+            if (!validatePassword(passwordInput.value)) {
+                alert('Please meet all password requirements');
+                return;
+            }
+            // Continue with form submission
+            console.log('Form submitted successfully');
+        });
+
+        // Password visibility toggle
         cubePeek.addEventListener('click', function() {
             if (passwordInput.type === 'password') {
                 passwordInput.type = 'text';
@@ -116,6 +155,7 @@
             }
         });
 
+        // Eye movement animation
         document.addEventListener('mousemove', (e) => {
             if (passwordInput.type === 'text') {
                 const eye = document.querySelector('.eye');

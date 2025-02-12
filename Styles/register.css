@@ -160,12 +160,24 @@
     font-size: 0.9rem;
     margin: 0.3rem 0;
     transition: color 0.3s ease;
+    display: flex;
+    align-items: center;
 }
 
 .password-requirements li::before {
     content: "•";
-    color: #ffdd57;
+    color: rgba(255, 255, 255, 0.5);
     margin-right: 0.5rem;
+    transition: color 0.3s ease;
+}
+
+.password-requirements li.valid {
+    color: #4CAF50;
+}
+
+.password-requirements li.valid::before {
+    content: "✓";
+    color: #4CAF50;
 }
 
 button {

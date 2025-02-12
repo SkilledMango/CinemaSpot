@@ -1,0 +1,266 @@
+.show-container {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+}
+
+.show-header {
+    display: flex;
+    gap: 2rem;
+    background: rgba(0, 0, 0, 0.7);
+    padding: 2rem;
+    border-radius: 15px;
+    margin-bottom: 2rem;
+}
+
+.show-poster {
+    width: 300px;
+    height: 450px;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.show-info {
+    flex: 1;
+}
+
+.show-info h1 {
+    font-size: 3rem;
+    color: #ffdd57;
+    margin-bottom: 1rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.show-meta {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.show-meta span {
+    color: #fff;
+    background: rgba(255, 221, 87, 0.2);
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-size: 0.9rem;
+}
+
+.show-description {
+    color: #fff;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+}
+
+.show-creator {
+    color: #ffdd57;  /* Changed from default black to match theme */
+    font-size: 1.1rem;
+    margin-top: 1rem;
+}
+
+.show-creator strong {
+    color: #fff;  /* Making the "Created by:" text white for contrast */
+}
+
+.cast-section, .seasons-section {
+    background: rgba(0, 0, 0, 0.7);
+    padding: 2rem;
+    border-radius: 15px;
+    margin-bottom: 2rem;
+}
+
+.cast-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 1.5rem;
+    margin-top: 1rem;
+}
+
+.cast-member {
+    text-align: center;
+}
+
+.cast-member img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 0.5rem;
+    border: 3px solid #ffdd57;
+}
+
+.cast-member h3 {
+    color: #fff;
+    margin-bottom: 0.25rem;
+}
+
+.cast-member p {
+    color: #ffdd57;
+}
+
+.season-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 1.5rem;
+    margin-top: 1rem;
+}
+
+.season-card {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 1.5rem;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.season-card h3 {
+    color: #ffdd57;
+    margin-bottom: 0.5rem;
+}
+
+.season-card p {
+    color: #fff;
+    margin-bottom: 1rem;
+}
+
+.watch-button {
+    background: #ffdd57;
+    color: #000;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.watch-button:hover {
+    transform: translateY(-2px);
+}
+
+.trailer-section {
+    background: rgba(0, 0, 0, 0.7);
+    padding: 2rem;
+    border-radius: 15px;
+    margin-bottom: 2rem;
+}
+
+.video-container {
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 aspect ratio */
+    height: 0;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.show-details {
+    background: rgba(0, 0, 0, 0.7);
+    padding: 2rem;
+    border-radius: 15px;
+    margin-bottom: 2rem;
+}
+
+.details-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
+}
+
+.detail-card {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 1.5rem;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.detail-card h3 {
+    color: #ffdd57;
+    margin-bottom: 0.5rem;
+}
+
+.detail-card p {
+    color: #fff;
+}
+
+.season-info {
+    margin: 1rem 0;
+    color: #fff;
+}
+
+.season-description {
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem;
+}
+
+.air-date {
+    font-size: 0.8rem;
+    color: #ffdd57;
+}
+
+.awards-section {
+    background: rgba(0, 0, 0, 0.7);
+    padding: 2rem;
+    border-radius: 15px;
+    margin-bottom: 2rem;
+}
+
+.awards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 1.5rem;
+    margin-top: 1rem;
+}
+
+.award-item {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 1.5rem;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.award-item h3 {
+    color: #ffdd57;
+    margin-bottom: 0.5rem;
+}
+
+.award-item p {
+    color: #fff;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+@media (max-width: 768px) {
+    .show-header {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .show-poster {
+        width: 250px;
+        height: 375px;
+    }
+
+    .show-info h1 {
+        text-align: center;
+    }
+
+    .show-meta {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .video-container {
+        margin-top: 1rem;
+    }
+
+    .details-grid {
+        grid-template-columns: 1fr;
+    }
+}

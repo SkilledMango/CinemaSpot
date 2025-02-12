@@ -241,7 +241,7 @@ form {
 h2::after {
     content: "";
     display: block;
-    width: 80%;
+    width: 100%;
     height: 5px;
     background: linear-gradient(to right, rgba(212, 175, 55, 1), rgba(255, 255, 255, 0.5), rgba(212, 175, 55, 1));
     margin: 10px auto 0;
@@ -361,12 +361,13 @@ aside ul {
     padding: 20px;
     transition: right 0.3s ease-in-out;
     box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5);
+    pointer-events: none;
 }
     
 
 .menu-checkbox:checked + .hamburger-menu + .sidebar {
     right: 0;
-    z-index: 1000;
+    pointer-events: auto;
 }
 
 

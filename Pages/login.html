@@ -7,24 +7,12 @@
     <link rel="stylesheet" href="/Styles/html.css" />
     <link rel="stylesheet" href="/Styles/login.css">
     <link rel="stylesheet" href="/Styles/social-login.css">
+    <script src="/Scripts/load-nav.js"></script>
     <title>Login - CinemaSpot</title>
 </head>
 
 <body>
     <header id="header">
-        <nav>
-            <ul>
-                <li><a href="/index.html">
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.2" stroke="currentColor" class="size-6" style="width: 35px; height: 25px;">
-                      <path stroke-linecap="round" stroke-linejoin="round" d="m2.25 12 8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25" />
-                    </svg>
-                  </a></li>                      
-                <li><a href="/Pages/store.html">Store</a></li>
-                <li><a href="/Pages/login.html">Login</a></li>
-                <li><a href="/Pages/register.html">Register</a></li>
-                <li><a href="/Pages/about.html">About</a></li>
-            </ul>
-        </nav>
     </header>
 
     <div class="login-wrapper">
@@ -39,15 +27,16 @@
                 <h1>Welcome Back</h1>
                 <p class="subtitle">Your next adventure awaits</p>
 
-                <form class="login-form">
+                <form class="login-form" onsubmit="handleLogin(event)">
+                    <div id="errorMessage" class="error-message"></div>
                     <div class="input-wrapper">
-                        <input type="text" id="username" required>
+                        <input type="text" id="username" required placeholder="Username">
                         <label for="username">Username</label>
                         <div class="input-highlight"></div>
                     </div>
 
                     <div class="input-wrapper">
-                        <input type="password" id="password" required>
+                        <input type="password" id="password" required placeholder="Password">
                         <label for="password">Password</label>
                         <div class="input-highlight"></div>
                         <div class="cube-peek">
@@ -110,7 +99,24 @@
         </div>
     </footer>
 
+    <script src="/Scripts/auth.js"></script>
     <script>
+    function handleLogin(event) {
+        event.preventDefault();
+        const errorMsg = document.getElementById('errorMessage');
+        
+        const result = login(
+            document.getElementById('username').value,
+            document.getElementById('password').value
+        );
+
+        if (result.success) {
+            window.location.href = '/index.html';
+        } else {
+            errorMsg.textContent = result.message;
+        }
+    }
+
     const passwordInput = document.getElementById('password');
     const cubePeek = document.querySelector('.cube-peek');
     const pupil = document.querySelector('.pupil');

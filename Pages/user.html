@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Account | CinemaSpot</title>
+    <link rel="stylesheet" href="/Styles/html.css">
+    <link rel="stylesheet" href="/Styles/user.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="icon" type="image/x-icon" href="/Assets/Images/buttons/Logo.webp">
+    <script src="/Scripts/load-nav.js"></script>
+    <script src="/Scripts/auth.js"></script>
+</head>
+<body>
+    <header id="header" role="banner"></header>
+
+    <main class="user-main">
+        <div class="profile-container">
+            <div class="profile-header">
+                <div class="profile-info">
+                    <h1 id="username"></h1>
+                    <p id="email"></p>
+                    <span class="membership-badge">
+                        <i class="fas fa-star"></i> Premium Member
+                    </span>
+                </div>
+            </div>
+
+            <!-- Watch Stats -->
+            <div class="stats-section">
+                <div class="stat-card">
+                    <i class="fas fa-film"></i>
+                    <h3>Movies Watched</h3>
+                    <span class="stat-number">12</span>
+                </div>
+                <div class="stat-card">
+                    <i class="fas fa-tv"></i>
+                    <h3>TV Shows</h3>
+                    <span class="stat-number">5</span>
+                </div>
+                <div class="stat-card">
+                    <i class="fas fa-clock"></i>
+                    <h3>Watch Time</h3>
+                    <span class="stat-number">48h</span>
+                </div>
+            </div>
+
+            <!-- Recently Watched -->
+            <div class="recent-grid">
+                <a href="/Pages/deadpool.html" class="recent-item">
+                    <img src="/Assets/Images/Sratim/Deadpool3.jpg" alt="Deadpool">
+                    <div class="recent-info">
+                        <h4>Deadpool 3</h4>
+                        <p>Last watched: 2 days ago</p>
+                    </div>
+                </a>
+            </div>
+
+            <!-- Account Actions -->
+            <div class="account-actions">
+                <button class="action-button" onclick="logout()">
+                    <i class="fas fa-sign-out-alt"></i> Logout
+                </button>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const currentUser = localStorage.getItem('currentUser');
+            const users = JSON.parse(localStorage.getItem('users') || '[]');
+            const user = users.find(u => u.username === currentUser);
+        
+            if (user) {
+                document.getElementById('username').textContent = user.username;
+                document.getElementById('email').textContent = user.email;
+            } else {
+                window.location.href = '/Pages/login.html';
+            }
+        });
+    </script>
+</body>
+</html>

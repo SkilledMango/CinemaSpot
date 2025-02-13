@@ -351,6 +351,7 @@ h2 {
     color: white;
     font-size: 1rem;
     transition: all 0.3s ease;
+    z-index: 1;
 }
 
 .input-group label {
@@ -363,12 +364,8 @@ h2 {
     pointer-events: none;
 }
 
-.input-group input:focus ~ label,
-.input-group input:valid ~ label {
-    top: -0.5rem;
-    left: 0.5rem;
-    font-size: 0.8rem;
-    color: #ffdd57;
+.input-group input::placeholder {
+    color: transparent;
 }
 
 .highlight-bar {
@@ -387,6 +384,17 @@ h2 {
 
 .input-group:has(#password) {
     margin-bottom: 7rem; /* Increase space after password field */
+}
+
+.input-group input:focus ~ label,
+.input-group input:not(:placeholder-shown) ~ label {
+    top: -0.5rem;
+    left: 0.5rem;
+    font-size: 0.8rem;
+    color: #ffdd57;
+    background: rgb(19, 33, 68);
+    padding: 0 0.5rem;
+    transform: translateY(0);
 }
 
 button {
@@ -480,7 +488,7 @@ button:hover {
 .pupil {
     width: 8px;
     height: 8px;
-    background: #333;
+    background: #333; /* Change back to original color */
     border-radius: 50%;
     position: absolute;
     transition: all 0.1s ease;
@@ -521,4 +529,15 @@ button:hover {
 
 .cube-peek:hover {
     transform: translateY(-50%) scale(1.1);
+}
+
+#errorMessage {
+    color: #ff6b6b;
+    font-size: 0.85rem;
+    margin: 0 0 1rem 0;
+    text-align: center;
+    padding: 8px;
+    font-weight: 600;
+    width: 100%;
+    letter-spacing: 0.3px;
 }

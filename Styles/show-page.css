@@ -124,17 +124,20 @@
 }
 
 .watch-button {
-    background: #ffdd57;
-    color: #000;
+    text-decoration: none;
+    background-color: #cad629; /* Original background color */
+    color: #000; /* Original text color */
+    padding: 10px 20px;
     border: none;
-    padding: 0.5rem 1rem;
     border-radius: 5px;
     cursor: pointer;
-    transition: transform 0.3s ease;
+    transition: background-color 0.3s;
 }
 
 .watch-button:hover {
-    transform: translateY(-2px);
+    background-color: rgb(73, 73, 100);
+    color: #fff; /* Change text color to white on hover */
+    text-decoration: none; /* Remove underline */
 }
 
 .trailer-section {

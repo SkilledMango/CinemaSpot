@@ -278,10 +278,37 @@ footer {
         gap: 10px;
     }
 
-
     .imgCovers {
         width: 200px;
         height: 300px;
+    }
+
+    nav {
+        display: none; /* Hide the main navigation on mobile */
+    }
+
+    .hamburger-menu {
+        display: block; /* Show hamburger menu */
+    }
+
+    /* Style for mobile sidebar navigation */
+    .sidebar {
+        padding-top: 60px;
+    }
+
+    .sidebar ul {
+        margin-top: 20px;
+    }
+
+    /* Add the main nav items to sidebar for mobile */
+    .mobile-nav {
+        margin-bottom: 30px;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        padding-bottom: 20px;
+    }
+
+    .mobile-nav li {
+        padding: 10px 0;
     }
 }
 
@@ -289,8 +316,12 @@ footer {
     .image-container {
         grid-template-columns: 1fr;
     }
+}
 
-
+@media screen and (min-width: 769px) {
+    .mobile-nav {
+        display: none; /* Hide mobile nav on desktop */
+    }
 }
 
 form {
@@ -509,4 +540,4 @@ button {
     padding: 10px 20px;
     font-size: 16px;
     cursor: pointer;
-}   
+}

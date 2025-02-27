@@ -27,6 +27,16 @@
 .store-item {
     transition: transform 0.3s ease;
     max-width: 200px;
+    text-align: center;
+}
+
+.store-item img {
+    width: 200px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease;
 }
 
 .store-item:hover {
@@ -38,16 +48,16 @@
     outline: none;
 }
 
-.imgButton{
-    filter: brightness(100) saturate(100%) invert(100%) sepia(100%) ;
+.imgButton {
+    filter: brightness(100) saturate(100%) invert(100%) sepia(100%);
     width: 25px;
     height: 25px;
     border-radius: 10px;
     transition: transform 0.3s ease;
 }
 
-.imgButton:hover{
-    filter:  brightness(100%) saturate(200%) sepia(0%) hue-rotate(45deg);
+.imgButton:hover {
+    filter: brightness(100%) saturate(200%) sepia(0%) hue-rotate(45deg);
 }
 
 .menu-checkbox {
@@ -71,19 +81,6 @@
     grid-template-columns: repeat(4, 1fr);
     gap: 12px;
     justify-items: center;
-}
-
-.imgCovers {
-    width: 230px;
-    height: 300px;
-    object-fit: cover;
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
-    transition: transform 0.3s ease;
-}
-
-.imgCovers:hover {
-    transform: scale(1.05);
 }
 
 @media screen and (max-width: 768px) {

@@ -66,7 +66,7 @@ function login(username, password) {
         if (user) {
             localStorage.setItem('isLoggedIn', 'true');
             localStorage.setItem('currentUser', username);
-            return { success: true };
+            return { success: true};
         }
         return { success: false, message: 'Invalid username or password' };
     } catch (error) {

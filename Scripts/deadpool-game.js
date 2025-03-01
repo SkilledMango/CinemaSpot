@@ -61,7 +61,7 @@ document.addEventListener('DOMContentLoaded', function() {
         moveDeadpool();
         
         // Increment score
-        score++;
+        score++; // There is not score system yet just saying.
     });
 
     // Toggle game state

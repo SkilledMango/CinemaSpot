@@ -316,8 +316,6 @@ button:hover {
     transform: translateY(-50%) scale(1.1);
 }
 
-/* ...existing code... */
-
 #errorMessage {
     color: #ff6b6b;
     font-size: 0.85rem;
@@ -329,4 +327,3 @@ button:hover {
     letter-spacing: 0.3px;
 }
 
-/* ...existing code... */

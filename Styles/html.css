@@ -473,7 +473,7 @@ aside ul {
     transition: right 0.3s ease-in-out;
     box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5);
     pointer-events: none;  /* Disable interaction when sidebar is closed */
-    z-index: 2001; /* Just below hamburger but above everything else */
+    z-index: 2001; 
 }
     
 .menu-checkbox:checked + .hamburger-menu + .sidebar {
@@ -522,22 +522,4 @@ button.nav-button {
     background: none !important;
     box-shadow: none !important;
     transform: none !important;
-}
-
-
-/* USER CSS */
-/* Add this to html.css or create a new CSS file */
-#user-info {
-    margin: 20px 0;
-}
-
-#user-info p {
-    font-size: 18px;
-    margin: 10px 0;
-}
-
-button {
-    padding: 10px 20px;
-    font-size: 16px;
-    cursor: pointer;
 }

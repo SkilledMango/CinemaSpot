@@ -86,8 +86,8 @@ function validatePassword(password) {
 
 function logout() {
     localStorage.removeItem('isLoggedIn');
-    localStorage.removeItem('username');
-    window.location.href = '/Pages/login.html';
+    localStorage.removeItem('currentUser');  // Changed from 'username' to 'currentUser'
+    window.location.href = '../index.html';  // Changed to relative path
 }
 
 // Run auth check when page loads

@@ -195,14 +195,43 @@ footer {
         width: 200px;
         height: 300px;
     }
+
+    /* Hide main navigation on mobile */
+    nav {
+        display: none;
+    }
+
+    /* Show hamburger menu */
+    .hamburger-menu {
+        display: block;
+    }
+
+    /* Style for mobile sidebar navigation */
+    .sidebar {
+        padding-top: 60px;
+    }
+
+    .sidebar ul {
+        margin-top: 20px;
+    }
+
+    /* Responsive adjustments for team container */
+    .team-container {
+        grid-template-columns: 1fr;
+        max-width: 400px;
+    }
 }
 
 @media screen and (max-width: 480px) {
     .image-container {
         grid-template-columns: 1fr;
     }
+}
 
-
+@media screen and (min-width: 769px) {
+    .mobile-nav {
+        display: none;
+    }
 }
 
 form {

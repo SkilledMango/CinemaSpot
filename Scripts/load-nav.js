@@ -32,6 +32,7 @@ document.addEventListener('DOMContentLoaded', () => {
             <!-- Mobile Navigation -->
             <ul class="mobile-nav">
                 ${mainNavItems}
+                <li><a href="../index.html">Home</a></li>
             </ul>
             <h3>Recommendeds</h3>
             <ul>

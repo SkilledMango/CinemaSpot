@@ -31,8 +31,8 @@ document.addEventListener('DOMContentLoaded', () => {
         <aside class="sidebar">
             <!-- Mobile Navigation -->
             <ul class="mobile-nav">
+            <li><a href="../index.html">Home</a></li>
                 ${mainNavItems}
-                <li><a href="../index.html">Home</a></li>
             </ul>
             <h3>Recommendeds</h3>
             <ul>

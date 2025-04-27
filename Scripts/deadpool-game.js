@@ -4,8 +4,7 @@ document.addEventListener('DOMContentLoaded', function() {
     deadpool.className = 'hidden-deadpool';
     document.body.appendChild(deadpool);
 
-    // Initialize score
-    let score = 0;
+    // Initialize game state
     let isGameActive = true;
 
     // Create game toggle button
@@ -59,9 +58,6 @@ document.addEventListener('DOMContentLoaded', function() {
 
         // Move to new position
         moveDeadpool();
-        
-        // Increment score
-        score++; // There is not score system yet just saying.
     });
 
     // Toggle game state
